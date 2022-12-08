@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Family Photos</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styling.css" />
+    <script src="js/FotoPrint_manager.js"></script>
+    <script src="js/FotoPrint.js"></script>
+    <script src="js/DrawingObjects.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384- ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ba78ff679.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+  <body>
+    <header class="container-fluid bg-dark">
+      <!-- logo -->
+      <div class="row">
+        <div
+          class="col d-flex justify-content-between justify-content-end align-items-baseline"
+          style="color: rgba(255, 255, 255, 0.695)"
+        >
+          <a
+            class="fa-brands fa-facebook text-reset"
+            href="https://www.facebook.com"
+          ></a>
+          <a
+            class="fa-brands fa-twitter text-reset"
+            href="https://www.twitter.com"
+          ></a>
+          <a
+            class="fa-brands fa-instagram text-reset"
+            href="https://www.instagram.com"
+          ></a>
+          <a
+            class="fa-brands fa-linkedin text-reset"
+            href="https://www.linkedin.com"
+          ></a>
+          <div class="col-11 text-right">All rights reserved</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nav  -->
+    <nav
+      class="navbar py-1 navbar-dark navbar-expand-sm"
+      style="background-color: rgb(222, 165, 10)"
+    >
+      <div class="container-fluid">
+        <!-- my name -->
+
+        <div class="col">
+          <h1><i class="goo fa-solid fa-image"></i>Foto Print</h1>
+        </div>
+
+        <!-- logo -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarLinks"
+        >
+          <span class="navbar-toggler-icon text-primary"></span>
+        </button>
+      </div>
+
+      <!-- buttons -->
+    </nav>
+    <div
+      class="container-fluid text-center"
+      style="background-color: rgb(194, 143, 47)"
+    >
+      <br />
+      <h3>Selecione um dos seguintes itens:</h3>
+      <div class="row">
+        <div class="col text-right">
+          <input class="file" type="file" id="input" name="myfile" />
+          <br />
+          <label for="item"> Texto</label>
+          <input type="text" id="item" />
+          <br />
+          <label for="head"> Cor do objeto</label>
+          <input class="color" type="color" id="head" name="head" />
+          <br />
+          <label for="head2"> Cor do canvas</label>
+          <input class="color" type="color" id="head2" name="head2" />
+          <br />
+          <button class="remove" onclick="remove();">Remover</button>
+        </div>
+        <div class="col">
+          <canvas
+            id="canvas"
+            width="1000"
+            height="175"
+            style="background-color: white"
+          >
+            Your browser doesn't recognize the canvas element
+          </canvas>
+        </div>
+      </div>
+
+      <section>
+        <canvas
+          id="canvas2"
+          width="1000"
+          height="500"
+          style="background-color: rgb(227, 157, 27)"
+        >
+          Your browser doesn't recognize the canvas element
+        </canvas>
+      </section>
+
+      <section>
+        <button onclick="saveasimage();">Guardar Imagem</button> <br />
+        <br />
+      </section>
+
+      <section>
+        <script>
+          window.onload = main();
+        </script>
+      </section>
+    </div>
+
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.facebook.com"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.facebook.com"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.google.pt/?hl=pt-PT"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://www.instagram.com"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://pt.linkedin.com"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- Github -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="https://github.com/GoncaloCSilva"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links -->
+
+        <!--Grid row-->
+
+        <!--Grid row-->
+
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3 bg-warning text-dark">
+        © 2022 Copyright: 48328 Gonçalo Silva
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>

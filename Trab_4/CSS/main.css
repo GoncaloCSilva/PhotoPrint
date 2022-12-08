@@ -1,0 +1,38 @@
+h1 {
+    font-family: 'Lato', sans-serif;
+}
+i.goo{
+    color: black;
+    margin-right: 10px;
+}
+nav{
+    color: black;
+}
+button.remove{
+    width: 60%;
+    cursor: pointer;
+    text-align: center;
+}
+input{
+    width: 60%;
+    cursor: pointer;
+    text-align: center;
+}
+input.color{
+    width: 60%;
+    cursor: pointer;
+    text-align: center;
+}
+input.file{
+    width: 85%;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
